@@ -1,0 +1,151 @@
+---
+title: "Sistemas lineares"
+number-sections: true
+lang: pt-BR
+---
+
+
+## Três métodos para resolver sistemas lineares
+
+
+Considere o seguinte sistema de equações lineares:
+\begin{align*}
+x + y - z &= -2\\
+x -y +2z &= -1\\
+2x - y - z &= 1
+\end{align*}
+Primeiro, definimos a matriz do sistema e o vetor dos valores no lado
+direito:
+
+
+```python
+from sympy import Matrix
+
+# define the matrix A
+A = Matrix([[1, 1, -1],
+             [1, -1, 2],
+             [2, -1, -1]])
+
+# define the vector b
+b = Matrix([-2, -1, 1])
+```
+
+Vamos resolver o sistema usando os três métodos estudados na disciplina.
+Começamos pela eliminação de Gauss-Jordan.
+
+
+```python
+# primeiro, vamos criar uma cópia A0 de A. 
+# Queremos usar A mais tarde
+A0 = A.copy()
+
+# Adicionamos o vetor b à matriz A0 como 4a coluna
+# observe o uso de ":"
+A0 = A0.row_join(b)
+A0
+```
+
+
+
+
+$\displaystyle \left[\begin{matrix}1 & 1 & -1 & -2\\1 & -1 & 2 & -1\\2 & -1 & -1 & 1\end{matrix}\right]$
+
+
+
+
+```python
+# Usando a função rref (Row Reduced Echelon Form), 
+# computamos a forma escalondada de A0.
+rref_A0, _ = A0.rref()
+rref_A0
+```
+
+
+
+
+$\displaystyle \left[\begin{matrix}1 & 0 & 0 & -1\\0 & 1 & 0 & -2\\0 & 0 & 1 & -1\end{matrix}\right]$
+
+
+
+Os números que aparecem na última coluna representam a solução do sistema: 
+
+$x=-1$, $y=-2$, $z=-1$.
+
+Ora, vamos usar o método da matriz inversa.
+
+
+```python
+# calculate the inverse of matrix A
+A_inv = A**-1
+
+# compute the product A_inv * b
+solution = A_inv * b
+solution
+```
+
+
+
+
+$\displaystyle \left[\begin{matrix}-1\\-2\\-1\end{matrix}\right]$
+
+
+
+Finalmente, resolveremos o problema usando o Regra do Cramer que não foi mencionado na aula, mas alguns de vocês podem ter aprendido no ensino médio.
+
+
+```python
+# calculate the matrix A1 obtained from A by replacing the first column with b
+A1 = A.copy()
+A1[:,0] = b
+
+# calculate the matrix A2 obtained from A by replacing the second column with b
+A2 = A.copy()
+A2[:,1] = b
+
+# calculate the matrix A3 obtained from A by replacing the third column with b
+A3 = A.copy()
+A3[:,2] = b
+
+# calculate the solution by computing the determinants of A1, A2, A3 and dividing by the determinant of A
+solution = [A1.det()/A.det(), A2.det()/A.det(), A3.det()/A.det()]
+
+solution
+
+```
+
+
+
+
+    [-1, -2, -1]
+
+
+
+## Exercício
+
+Agora faça você. 
+
+Resolvem usando os três métodos no exemplo anterior o seguinte sistema de equações lineares:
+\begin{align*}
+4x_1 + x_2 + 2x_3+ 4 x_4 +2 x_5 + 2 x_6 & = -2\\
+2x_1 + 2x_2 + 2x_3 + 3x_4 + 3x_5 + 4x_6 & = -1\\
+4x_1 + 2x_2 + x_3 + 4x_4 + 2x_6 & = 1\\
+x_1 + 2x_3 + 4x_4 + 3x_5 & = 0\\
+4x_2 + 4x_4 & = 0\\
+2x_1 + 3x_2 + 4x_3 + x_4 + 2x_5 + x_6 & = 2
+\end{align*}
+Para ajudar, coloquei aqui a matriz do sistema e o vetor \$b\$ para
+serem copiados e colados na janela do Scilab.
+
+```
+# matriz A
+[[4, 1, 2, 4, 2, 2],
+ [2, 2, 2, 3, 3, 4],
+ [4, 2, 1, 4, 0, 2],
+ [1, 0, 2, 4, 3, 0],
+ [0, 4, 0, 4, 0, 0],
+ [2, 3, 4, 1, 2, 1]]
+
+# vetor b
+[-2, -1, 1, 0, 0, 2])
+```
+

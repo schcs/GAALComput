@@ -1,0 +1,99 @@
+## O problema da interpolação
+
+Sejam $P_1=(1,1)$, $P_2=(-1,1)$, $P_3=(2,1)$ e $P_3=(-2,-11)$ quatro pontos no plano. Queremos achar uma função
+polinomial
+$$
+f(x)=\alpha_3 x^3+\alpha_2 x^2+\alpha_1 x+\alpha_0
+$$
+tal que o grafo de $f(x)$ passe pelos pontos $P_1$, $P_2$,
+$P\_3$, $P_4$. Em outras palavras,
+$$
+f(1)=1,\quad f(-1)=1,\quad f(2)=1,\quad f(-2)=-11.
+$$
+Substituindo em \$f(x)\$ obtemos o seguinte sistema de equações
+lineares.
+\begin{align*}
+\alpha_0+\alpha_1+\alpha_2+\alpha_3&=1\\
+\alpha_0-\alpha_1+\alpha_2-\alpha_3&=1\\
+\alpha_0+2\alpha_1+4\alpha_2+8\alpha_3&=1\\
+\alpha_0-2\alpha_1+4\alpha_2-8\alpha_3&=-11
+\end{align*}
+Para resolver o problema da interpolação, precisamos resolver o sistema
+acima.
+
+
+
+```python
+from sympy import Matrix
+
+# defina a matriz do sistema
+A = Matrix([[1, 1, 1, 1], 
+            [1, -1, 1, -1], 
+            [1, 2, 4, 8], 
+            [1, -2, 4, -8]])
+
+# defina o vetor no lado direito
+b = Matrix([1, 1, 1, -11])
+
+# calcule a solução
+solution = A.inv()*b
+solution
+```
+
+
+
+
+$\displaystyle \left[\begin{matrix}3\\-1\\-2\\1\end{matrix}\right]$
+
+
+
+Obtemos da computação que $\alpha_0=3$, $\alpha_1=-1$, $\alpha_2=-2$, $\alpha_3=1$. Ou seja, o polinômio procurado é\
+$$
+f(x)=x^3-2x^2-x+3
+$$
+Para visualizar o polinômio obtido, podemos executar as seguintes linhas.
+
+
+```python
+from sympy import Poly, symbols, Range, plot
+from numpy import arange
+from matplotlib import pyplot as pp
+
+# define the polynomial
+p = Poly([3, -1, -2, 1], symbols('x'))
+
+# define the range of values
+x_values = symbols('x_values')
+range_values = arange(-3, 3, 0.1)
+
+# evaluate the polynomial for each value in the range
+y_values = [p.subs('x', x_val) for x_val in range_values]
+
+# plot the polynomial
+y_values
+pp.plot(range_values, y_values)
+```
+
+
+
+
+    [<matplotlib.lines.Line2D at 0x7f36ea7c17b0>]
+
+
+
+
+    
+![png](output_3_1.png)
+    
+
+## Exercício
+
+Agora faça você mesmo.
+
+Ache um polinômio $f(x)$ de grau $5$ tal que
+$$
+f(0)=-1,\ f(1)=-2,\ f(-1)=0,\ f(2)=-57,\ f(-2)=79,\ f(3)=-436.
+$$
+Vizualize o polinômio encontrado.
+
+

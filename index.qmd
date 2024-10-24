@@ -1,0 +1,6 @@
+## Exercícios computacionais para GAAL
+
+- [Matrices](matrices.qmd)
+- [Sistemas lineares](sistemas.qmd)
+- [O problema da interpolação](interpol.qmd)
+
