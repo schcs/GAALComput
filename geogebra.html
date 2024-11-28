@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercícios computacionais para GAAL - 2&nbsp; Sistemas lineares</title>
+<title>Exercícios computacionais para GAAL - 4&nbsp; Geometria 3D com GeoGebra</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./interpol.html" rel="next">
-<link href="./matrices.html" rel="prev">
+<link href="./interpol.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -673,7 +638,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sistemas.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sistemas lineares</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./geogebra.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geometria 3D com GeoGebra</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -712,7 +677,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sistemas.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sistemas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sistemas lineares</span></span></a>
   </div>
 </li>
@@ -724,7 +689,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./geogebra.html" class="sidebar-item-text sidebar-link">
+  <a href="./geogebra.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geometria 3D com GeoGebra</span></span></a>
   </div>
 </li>
@@ -734,21 +699,14 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Índice</h2>
-   
-  <ul>
-  <li><a href="#três-métodos-para-resolver-sistemas-lineares" id="toc-três-métodos-para-resolver-sistemas-lineares" class="nav-link active" data-scroll-target="#três-métodos-para-resolver-sistemas-lineares"><span class="header-section-number">2.1</span> Três métodos para resolver sistemas lineares</a></li>
-  <li><a href="#exercício" id="toc-exercício" class="nav-link" data-scroll-target="#exercício"><span class="header-section-number">2.2</span> Exercício</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sistemas lineares</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geometria 3D com GeoGebra</span></h1>
 </div>
 
 
@@ -765,90 +723,60 @@ window.Quarto = {
 </header>
 
 
-<section id="três-métodos-para-resolver-sistemas-lineares" class="level2" data-number="2.1">
-<h2 data-number="2.1" data-anchor-id="três-métodos-para-resolver-sistemas-lineares"><span class="header-section-number">2.1</span> Três métodos para resolver sistemas lineares</h2>
-<p>Considere o seguinte sistema de equações lineares: <span class="math display">\[\begin{align*}
-x + y - z &amp;= -2\\
-x -y +2z &amp;= -1\\
-2x - y - z &amp;= 1
-\end{align*}\]</span> Primeiro, definimos a matriz do sistema e o vetor dos valores no lado direito:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> Matrix</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># define the matrix A</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Matrix([[<span class="dv">1</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>],</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>             [<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>],</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>             [<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>]])</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># define the vector b</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> Matrix([<span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>])</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Vamos resolver o sistema usando os três métodos estudados na disciplina. Começamos pela eliminação de Gauss-Jordan.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># primeiro, vamos criar uma cópia A0 de A. </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Queremos usar A mais tarde</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>A0 <span class="op">=</span> A.copy()</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Adicionamos o vetor b à matriz A0 como 4a coluna</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># observe o uso de ":"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>A0 <span class="op">=</span> A0.row_join(b)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>A0</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><span class="math inline">\(\displaystyle \left[\begin{matrix}1 &amp; 1 &amp; -1 &amp; -2\\1 &amp; -1 &amp; 2 &amp; -1\\2 &amp; -1 &amp; -1 &amp; 1\end{matrix}\right]\)</span></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Usando a função rref (Row Reduced Echelon Form), </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># computamos a forma escalondada de A0.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>rref_A0, _ <span class="op">=</span> A0.rref()</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>rref_A0</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><span class="math inline">\(\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; -1\\0 &amp; 1 &amp; 0 &amp; -2\\0 &amp; 0 &amp; 1 &amp; -1\end{matrix}\right]\)</span></p>
-<p>Os números que aparecem na última coluna representam a solução do sistema:</p>
-<p><span class="math inline">\(x=-1\)</span>, <span class="math inline">\(y=-2\)</span>, <span class="math inline">\(z=-1\)</span>.</p>
-<p>Ora, vamos usar o método da matriz inversa.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the inverse of matrix A</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>A_inv <span class="op">=</span> A<span class="op">**-</span><span class="dv">1</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># compute the product A_inv * b</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> A_inv <span class="op">*</span> b</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>solution</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><span class="math inline">\(\displaystyle \left[\begin{matrix}-1\\-2\\-1\end{matrix}\right]\)</span></p>
-<p>Finalmente, resolveremos o problema usando o Regra do Cramer que não foi mencionado na aula, mas alguns de vocês podem ter aprendido no ensino médio.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the matrix A1 obtained from A by replacing the first column with b</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>A1 <span class="op">=</span> A.copy()</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>A1[:,<span class="dv">0</span>] <span class="op">=</span> b</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the matrix A2 obtained from A by replacing the second column with b</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>A2 <span class="op">=</span> A.copy()</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>A2[:,<span class="dv">1</span>] <span class="op">=</span> b</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the matrix A3 obtained from A by replacing the third column with b</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>A3 <span class="op">=</span> A.copy()</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>A3[:,<span class="dv">2</span>] <span class="op">=</span> b</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the solution by computing the determinants of A1, A2, A3 and dividing by the determinant of A</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> [A1.det()<span class="op">/</span>A.det(), A2.det()<span class="op">/</span>A.det(), A3.det()<span class="op">/</span>A.det()]</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>solution</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>[-1, -2, -1]</code></pre>
-</section>
-<section id="exercício" class="level2" data-number="2.2">
-<h2 data-number="2.2" data-anchor-id="exercício"><span class="header-section-number">2.2</span> Exercício</h2>
-<p>Agora faça você.</p>
-<p>Resolvem usando os três métodos no exemplo anterior o seguinte sistema de equações lineares: <span class="math display">\[\begin{align*}
-4x_1 + x_2 + 2x_3+ 4 x_4 +2 x_5 + 2 x_6 &amp; = -2\\
-2x_1 + 2x_2 + 2x_3 + 3x_4 + 3x_5 + 4x_6 &amp; = -1\\
-4x_1 + 2x_2 + x_3 + 4x_4 + 2x_6 &amp; = 1\\
-x_1 + 2x_3 + 4x_4 + 3x_5 &amp; = 0\\
-4x_2 + 4x_4 &amp; = 0\\
-2x_1 + 3x_2 + 4x_3 + x_4 + 2x_5 + x_6 &amp; = 2
-\end{align*}\]</span> Para ajudar, coloquei aqui a matriz do sistema e o vetor $b$ para serem copiados e colados na janela do Scilab.</p>
-<pre><code># matriz A
-[[4, 1, 2, 4, 2, 2],
- [2, 2, 2, 3, 3, 4],
- [4, 2, 1, 4, 0, 2],
- [1, 0, 2, 4, 3, 0],
- [0, 4, 0, 4, 0, 0],
- [2, 3, 4, 1, 2, 1]]
-
-# vetor b
-[-2, -1, 1, 0, 0, 2])</code></pre>
+<p>Observe na janela seguinte como definir pontos, vetores, planos e retas em <a href="https://www.geogebra.org">GeoGebra</a>.</p>
+<iframe src="https://www.geogebra.org/calculator/j85fjtka?embed" width="800" height="600" allowfullscreen="" style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0">
+</iframe>
+<p>Usando GeoGebra, resolve os seguintes exercícios.</p>
+<div id="exr-gg1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 4.1</strong></span> Determine a equação do plano em cada situação descrita.</p>
+<ol type="1">
+<li>O plano passa pelo ponto <span class="math inline">\(A=(2,0,-2)\)</span> e é paralelo aos vetores <span class="math inline">\(u=(1,-1,1)\)</span> e <span class="math inline">\(v=(2,3,0)\)</span>.</li>
+<li>O plano passa pelos pontos <span class="math inline">\(A=(-3,1,-2)\)</span> e <span class="math inline">\(B=(-1,2,1)\)</span> e é paralelo ao vetor <span class="math inline">\(v=(2,0,-3)\)</span>.</li>
+<li>O plano contém os pontos <span class="math inline">\(A=(1,-2,2)\)</span> e <span class="math inline">\(B=(-3,1,-2)\)</span> e é perpendicular ao plano <span class="math inline">\(2x+y-z=-8\)</span>.</li>
+</ol>
+</div>
+<div id="exr-gg2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 4.2</strong></span> Considere o plano <span class="math inline">\(\pi\)</span> de equação geral <span class="math inline">\(x+2y-4z=2\)</span> e considere a reta <span class="math inline">\(r\)</span> de equação paramétrica <span class="math inline">\((x,y,z) = (3,2,-1) + t(1,-1,2)\)</span>.</p>
+<ol type="1">
+<li>Mostre que o plano <span class="math inline">\(\pi\)</span> e a reta <span class="math inline">\(r\)</span> são concorrentes, calculando explicitamente o ponto <span class="math inline">\(P = \pi \cap r\)</span>.</li>
+<li>Determine a equação paramétrica da reta <span class="math inline">\(s\)</span> contida em <span class="math inline">\(\pi\)</span> e que é perpendicular a reta <span class="math inline">\(r\)</span>.</li>
+</ol>
+</div>
+<div id="exr-gg3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 4.3</strong></span> Considere a reta <span class="math inline">\(r\)</span> de equação paramétrica <span class="math display">\[(x,y,z)\ =\ (5,0,-5) + t(-2,1,4).\]</span></p>
+<ol type="1">
+<li>Mostre que a reta <span class="math inline">\(r\)</span> e o eixo <span class="math inline">\(z\)</span> são retas reversas.</li>
+<li>Calcule a distância entre a reta <span class="math inline">\(r\)</span> e o eixo <span class="math inline">\(z\)</span>.</li>
+<li>Determine a equação do plano que contém a reta <span class="math inline">\(r\)</span> e que é paralelo ao eixo <span class="math inline">\(z\)</span>.</li>
+</ol>
+</div>
+<div id="exr-gg4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 4.4</strong></span> Considere as retas <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> de respectivas equações paramétricas</p>
+<p><span class="math display">\[r:\ (x,y,z)\ =\ (3,1,2) + t(-1,4,5)\]</span> <span class="math display">\[s:\ (x,y,z)\ =\ (3,5,1) + s(-1,1,3)\]</span></p>
+<ol type="1">
+<li>Mostre <span class="math inline">\(r\)</span> e <span class="math inline">\(s\)</span> são retas reversas.</li>
+<li>Determine a equação do plano <span class="math inline">\(\pi\)</span> que contém a reta <span class="math inline">\(r\)</span> e que é paralelo a reta <span class="math inline">\(s\)</span>.</li>
+</ol>
+</div>
+<div id="exr-gg5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 4.5</strong></span> Considere as retas <span class="math inline">\(m\)</span> e <span class="math inline">\(n\)</span> de equações paramétricas</p>
+<p><span class="math display">\[m:\ (x,y,z) = (1,-1,0) + t(-2,1,3)\]</span></p>
+<p><span class="math display">\[n:\ (x,y,z) = (2,3,1) + s(4,1,2)\]</span></p>
+<ol type="1">
+<li>Mostre que <span class="math inline">\(m\)</span> e <span class="math inline">\(n\)</span> são retas reversas.</li>
+<li>Determine a equação paramétrica da reta <span class="math inline">\(\ell\)</span> que passa por <span class="math inline">\(P=(-1,3,-8)\)</span> e que é concorrente com <span class="math inline">\(m\)</span> e com <span class="math inline">\(n\)</span>.</li>
+</ol>
+</div>
+<div id="exr-gg6" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 4.6</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Determine a equação do plano <span class="math inline">\(\pi\)</span> que passa pelos pontos <span class="math inline">\(A = (1,0,0)\)</span>, <span class="math inline">\(B = (0,2,0)\)</span> e <span class="math inline">\(C = (0,0,3)\)</span>.</li>
+<li>Seja <span class="math inline">\(O = (0,0,0)\)</span> a origem do sistema de coordenadas. Determine o ponto <span class="math inline">\(P \in \pi\)</span> tal que a reta que liga os pontos <span class="math inline">\(O\)</span> e <span class="math inline">\(P\)</span> seja perpendicular ao plano <span class="math inline">\(\pi\)</span>.</li>
+<li>Determine a equação geral do plano que contém o eixo <span class="math inline">\(z\)</span> e que é perpendicular ao plano <span class="math inline">\(\pi\)</span>.</li>
+</ol>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1262,14 +1190,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./matrices.html" class="pagination-link" aria-label="Matrizes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matrizes</span></span>
+      <a href="./interpol.html" class="pagination-link" aria-label="O problema da interpolação">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">O problema da interpolação</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./interpol.html" class="pagination-link" aria-label="O problema da interpolação">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">O problema da interpolação</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercícios computacionais para GAAL - 4&nbsp; O problema da interpolação</title>
+<title>Exercícios computacionais para GAAL - 3&nbsp; O problema da interpolação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./geogebra.html" rel="next">
 <link href="./sistemas.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -672,7 +673,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./interpol.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">O problema da interpolação</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./interpol.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">O problema da interpolação</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -700,25 +701,31 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Exercícios computacionais para GAAL</span></span></a>
+ <span class="menu-text">Conteúdo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matrizes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matrizes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sistemas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sistemas lineares</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sistemas lineares</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interpol.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">O problema da interpolação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">O problema da interpolação</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./geogebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geometria 3D com GeoGebra</span></span></a>
   </div>
 </li>
     </ul>
@@ -731,7 +738,7 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercício" id="toc-exercício" class="nav-link active" data-scroll-target="#exercício"><span class="header-section-number">4.1</span> Exercício</a></li>
+  <li><a href="#exercício" id="toc-exercício" class="nav-link active" data-scroll-target="#exercício"><span class="header-section-number">3.1</span> Exercício</a></li>
   </ul>
 </nav>
     </div>
@@ -740,7 +747,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">O problema da interpolação</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">O problema da interpolação</span></h1>
 </div>
 
 
@@ -759,9 +766,9 @@ window.Quarto = {
 
 <p>Sejam <span class="math inline">\(P_1=(1,1)\)</span>, <span class="math inline">\(P_2=(-1,1)\)</span>, <span class="math inline">\(P_3=(2,1)\)</span> e <span class="math inline">\(P_3=(-2,-11)\)</span> quatro pontos no plano. Queremos achar uma função polinomial <span class="math display">\[
 f(x)=\alpha_3 x^3+\alpha_2 x^2+\alpha_1 x+\alpha_0
-\]</span> tal que o grafo de <span class="math inline">\(f(x)\)</span> passe pelos pontos <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>, <span class="math inline">\(P\_3\)</span>, <span class="math inline">\(P_4\)</span>. Em outras palavras, <span class="math display">\[
+\]</span> tal que o grafo de <span class="math inline">\(f(x)\)</span> passe pelos pontos <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>, <span class="math inline">\(P_3\)</span>, <span class="math inline">\(P_4\)</span>. Em outras palavras, <span class="math display">\[
 f(1)=1,\quad f(-1)=1,\quad f(2)=1,\quad f(-2)=-11.
-\]</span> Substituindo em $f(x)$ obtemos o seguinte sistema de equações lineares. <span class="math display">\[\begin{align*}
+\]</span> Substituindo em <span class="math inline">\(f(x)\)</span> obtemos o seguinte sistema de equações lineares. <span class="math display">\[\begin{align*}
 \alpha_0+\alpha_1+\alpha_2+\alpha_3&amp;=1\\
 \alpha_0-\alpha_1+\alpha_2-\alpha_3&amp;=1\\
 \alpha_0+2\alpha_1+4\alpha_2+8\alpha_3&amp;=1\\
@@ -810,8 +817,8 @@ f(x)=x^3-2x^2-x+3
 <figcaption>png</figcaption>
 </figure>
 </div>
-<section id="exercício" class="level2" data-number="4.1">
-<h2 data-number="4.1" data-anchor-id="exercício"><span class="header-section-number">4.1</span> Exercício</h2>
+<section id="exercício" class="level2" data-number="3.1">
+<h2 data-number="3.1" data-anchor-id="exercício"><span class="header-section-number">3.1</span> Exercício</h2>
 <p>Agora faça você mesmo.</p>
 <p>Ache um polinômio <span class="math inline">\(f(x)\)</span> de grau <span class="math inline">\(5\)</span> tal que <span class="math display">\[
 f(0)=-1,\ f(1)=-2,\ f(-1)=0,\ f(2)=-57,\ f(-2)=79,\ f(3)=-436.
@@ -1233,10 +1240,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./sistemas.html" class="pagination-link" aria-label="Sistemas lineares">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sistemas lineares</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sistemas lineares</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./geogebra.html" class="pagination-link" aria-label="Geometria 3D com GeoGebra">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Geometria 3D com GeoGebra</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
