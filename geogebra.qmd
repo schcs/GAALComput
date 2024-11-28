@@ -1,0 +1,64 @@
+---
+title: "Geometria 3D com GeoGebra"
+number-sections: true
+lang: pt-BR
+---
+
+Observe na janela seguinte como definir pontos, vetores, planos e retas em [GeoGebra](https://www.geogebra.org). 
+
+<iframe src="https://www.geogebra.org/calculator/j85fjtka?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+Usando GeoGebra, resolve os seguintes exercícios.
+
+:::{#exr-gg1}
+Determine a equação do plano em cada situação descrita.
+
+1. O plano passa pelo ponto $A=(2,0,-2)$ e é paralelo aos vetores $u=(1,-1,1)$ e \linebreak $v=(2,3,0)$.
+2. O plano passa pelos pontos $A=(-3,1,-2)$ e $B=(-1,2,1)$ e é paralelo ao vetor $v=(2,0,-3)$.
+3. O plano contém os pontos $A=(1,-2,2)$ e $B=(-3,1,-2)$ e é perpendicular ao plano $2x+y-z=-8$.
+:::
+
+:::{#exr-gg2}
+Considere o plano $\pi$ de equação geral $x+2y-4z=2$ e considere a reta $r$ de equação paramétrica
+$(x,y,z) = (3,2,-1) + t(1,-1,2)$.
+
+1. Mostre que o plano $\pi$ e a reta $r$ são concorrentes, calculando explicitamente o ponto $P = \pi \cap r$.
+2. Determine a equação paramétrica da reta $s$ contida em $\pi$ e que é perpendicular a reta $r$. 
+:::
+
+:::{#exr-gg3}
+Considere a reta $r$ de equação paramétrica
+$$(x,y,z)\ =\ (5,0,-5) + t(-2,1,4).$$
+
+1. Mostre que a reta $r$ e o eixo $z$ são retas reversas.
+2. Calcule a distância entre a reta $r$ e o eixo $z$. 
+3. Determine a equação do plano que contém a reta $r$ e que é paralelo ao eixo $z$.
+:::
+
+:::{#exr-gg4}
+Considere as retas $r$ e $s$ de respectivas equações paramétricas
+
+$$r:\ (x,y,z)\ =\ (3,1,2) + t(-1,4,5)$$
+$$s:\ (x,y,z)\ =\ (3,5,1) + s(-1,1,3)$$
+
+1. Mostre $r$ e $s$ são retas reversas.
+2. Determine a equação do plano $\pi$ que contém a reta $r$ e que é paralelo a reta $s$.
+:::
+
+:::{#exr-gg5}
+Considere as retas $m$ e $n$ de equações paramétricas
+
+$$m:\ (x,y,z) = (1,-1,0) + t(-2,1,3)$$
+
+$$n:\ (x,y,z) = (2,3,1) + s(4,1,2)$$
+
+1. Mostre que $m$ e $n$ são retas reversas.
+2. Determine a equação paramétrica da reta $\ell$ que passa por $P=(-1,3,-8)$ e que é concorrente com $m$ e com $n$.
+:::
+
+:::{#exr-gg6}
+1. Determine a equação do plano $\pi$ que passa pelos pontos $A = (1,0,0)$, $B = (0,2,0)$ e $C = (0,0,3)$.
+2. Seja $O = (0,0,0)$ a origem do sistema de coordenadas. Determine o ponto $P \in \pi$ tal que a reta que liga
+os pontos $O$ e $P$ seja perpendicular ao plano $\pi$.
+3. Determine a equação geral do plano que contém o eixo $z$ e que é perpendicular ao plano $\pi$.
+:::
