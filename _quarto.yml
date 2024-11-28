@@ -9,12 +9,13 @@ book:
   author: 
     - name: "Csaba Schneider"
     - affiliation: Universidade Federal de Minas Gerais
-  date: "Criado e atualizado 2024/II"
+  date: "25 November 2024"
   chapters:
     - index.qmd
     - matrices.qmd
     - sistemas.qmd
     - interpol.qmd
+    - geogebra.qmd
 license: "CC BY"
 copyright: 
   holder: Csaba Schneider

@@ -6,11 +6,11 @@ $$
 f(x)=\alpha_3 x^3+\alpha_2 x^2+\alpha_1 x+\alpha_0
 $$
 tal que o grafo de $f(x)$ passe pelos pontos $P_1$, $P_2$,
-$P\_3$, $P_4$. Em outras palavras,
+$P_3$, $P_4$. Em outras palavras,
 $$
 f(1)=1,\quad f(-1)=1,\quad f(2)=1,\quad f(-2)=-11.
 $$
-Substituindo em \$f(x)\$ obtemos o seguinte sistema de equações
+Substituindo em $f(x)$ obtemos o seguinte sistema de equações
 lineares.
 \begin{align*}
 \alpha_0+\alpha_1+\alpha_2+\alpha_3&=1\\

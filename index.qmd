@@ -1,6 +1,12 @@
-## Exercícios computacionais para GAAL
+---
+number-sections: false
+lang: pt-BR
+---
+
+# Conteúdo {.unnumbered}
+
 
 - [Matrices](matrices.qmd)
 - [Sistemas lineares](sistemas.qmd)
 - [O problema da interpolação](interpol.qmd)
-
+- [Geometria 3D com GeoGebra](geogebra.qmd)
