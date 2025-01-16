@@ -2,7 +2,7 @@ project:
   type: book
 
 execute: 
-  freeze: true
+  freeze: auto
 
 book:
   title: "Exercícios computacionais para GAAL"
