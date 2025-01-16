@@ -10,3 +10,4 @@ lang: pt-BR
 - [Sistemas lineares](sistemas.qmd)
 - [O problema da interpolação](interpol.qmd)
 - [Geometria 3D com GeoGebra](geogebra.qmd)
+- [Autovalores, autovetores, diagonalização](diagonal.qmd)

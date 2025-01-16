@@ -16,6 +16,7 @@ book:
     - sistemas.qmd
     - interpol.qmd
     - geogebra.qmd
+    - diagonal.qmd
 license: "CC BY"
 copyright: 
   holder: Csaba Schneider

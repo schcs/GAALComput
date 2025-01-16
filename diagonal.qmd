@@ -1,0 +1,47 @@
+---
+title: "Geometria 3D com GeoGebra"
+number-sections: true
+lang: pt-BR
+---
+
+## Autovalores, autovetores, diagonalização
+
+:::{#exm-eigen}
+Considere a matriz 
+$$
+A = \begin{pmatrix} 3 & -2 &  4 & -2\\ 
+                    5 &  3 & -3 & -2\\
+                    5 & -2 &  2 & -2\\ 
+                    5 & -2 & -3 &  3
+    \end{pmatrix}
+$$
+Vamos calcular os seguintes atributos de $A$:
+
+1. o polinômio caraterístico de $A$;
+2. os autovalores de $A$;
+3. vamos decidir se $A$ é diagonalizável;
+4. vamos calcular matriz $P$ tal que $P^{-1}AP$ é diagonal.
+:::
+
+Primeiro, vamos definir a matrix $A$:
+```{python}
+from sympy import *
+A = Matrix([[3, -2,  4, -2], [5,  3, -3, -2], [5, -2,  2, -2], [5, -2, -3,  3]])
+A
+Matrix([
+[3, -2,  4, -2],
+[5,  3, -3, -2],
+[5, -2,  2, -2],
+[5, -2, -3,  3]])
+```
+
+O polinômio caraterístico de $A$ é definido como $\det(A-tI)$ onde $t$ é um indeterminante e $I$ é a matriz identidade $4\times 4$. O polinômio caraterístico pode ser determinado usando diretamente esta definição. Note que como o indeterminante `t` e a matriz 
+identidade são definidos em `SymPy`.
+
+```{python}
+t = var('t')
+I4 = eye(4)
+p = det(A-t*I4)
+p
+```
+
