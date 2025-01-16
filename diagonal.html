@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Geometria 3D com GeoGebra – Exercícios computacionais para GAAL</title>
+<title>5&nbsp; Autovalores, autovetores, diagonalização – Exercícios computacionais para GAAL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -672,7 +672,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diagonal.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometria 3D com GeoGebra</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diagonal.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Autovalores, autovetores, diagonalização</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -730,7 +730,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./diagonal.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometria 3D com GeoGebra</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Autovalores, autovetores, diagonalização</span></span></a>
   </div>
 </li>
     </ul>
@@ -743,7 +743,7 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#autovalores-autovetores-diagonalização" id="toc-autovalores-autovetores-diagonalização" class="nav-link active" data-scroll-target="#autovalores-autovetores-diagonalização"><span class="header-section-number">5.1</span> Autovalores, autovetores, diagonalização</a></li>
+  <li><a href="#autovalores-e-autovetores" id="toc-autovalores-e-autovetores" class="nav-link active" data-scroll-target="#autovalores-e-autovetores"><span class="header-section-number">5.1</span> Autovalores e autovetores</a></li>
   </ul>
 </nav>
     </div>
@@ -752,7 +752,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Geometria 3D com GeoGebra</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Autovalores, autovetores, diagonalização</span></h1>
 </div>
 
 
@@ -769,8 +769,8 @@ window.Quarto = {
 </header>
 
 
-<section id="autovalores-autovetores-diagonalização" class="level2" data-number="5.1">
-<h2 data-number="5.1" data-anchor-id="autovalores-autovetores-diagonalização"><span class="header-section-number">5.1</span> Autovalores, autovetores, diagonalização</h2>
+<section id="autovalores-e-autovetores" class="level2" data-number="5.1">
+<h2 data-number="5.1" data-anchor-id="autovalores-e-autovetores"><span class="header-section-number">5.1</span> Autovalores e autovetores</h2>
 <div id="exm-eigen" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 5.1</strong></span> Considere a matriz <span class="math display">\[
 A = \begin{pmatrix} 3 &amp; -2 &amp;  4 &amp; -2\\
@@ -781,13 +781,11 @@ A = \begin{pmatrix} 3 &amp; -2 &amp;  4 &amp; -2\\
 \]</span> Vamos calcular os seguintes atributos de <span class="math inline">\(A\)</span>:</p>
 <ol type="1">
 <li>o polinômio caraterístico de <span class="math inline">\(A\)</span>;</li>
-<li>os autovalores de <span class="math inline">\(A\)</span>;</li>
-<li>vamos decidir se <span class="math inline">\(A\)</span> é diagonalizável;</li>
-<li>vamos calcular matriz <span class="math inline">\(P\)</span> tal que <span class="math inline">\(P^{-1}AP\)</span> é diagonal.</li>
+<li>os autovalores de <span class="math inline">\(A\)</span>.</li>
 </ol>
 </div>
 <p>Primeiro, vamos definir a matrix <span class="math inline">\(A\)</span>:</p>
-<div id="2c771cc6" class="cell" data-execution_count="1">
+<div id="fc59efec" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Matrix([[<span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>,  <span class="dv">4</span>, <span class="op">-</span><span class="dv">2</span>], [<span class="dv">5</span>,  <span class="dv">3</span>, <span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>], [<span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>,  <span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>], [<span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>,  <span class="dv">3</span>]])</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>A</span>
@@ -801,7 +799,7 @@ A = \begin{pmatrix} 3 &amp; -2 &amp;  4 &amp; -2\\
 </div>
 </div>
 <p>O polinômio caraterístico de <span class="math inline">\(A\)</span> é definido como <span class="math inline">\(\det(A-tI)\)</span> onde <span class="math inline">\(t\)</span> é um indeterminante e <span class="math inline">\(I\)</span> é a matriz identidade <span class="math inline">\(4\times 4\)</span>. O polinômio caraterístico pode ser determinado usando diretamente esta definição. Note que como o indeterminante <code>t</code> e a matriz identidade são definidos em <code>SymPy</code>.</p>
-<div id="1abd94fc" class="cell" data-execution_count="2">
+<div id="bf05bdc3" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> var(<span class="st">'t'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>I4 <span class="op">=</span> eye(<span class="dv">4</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> det(A<span class="op">-</span>t<span class="op">*</span>I4)</span>
@@ -809,6 +807,38 @@ A = \begin{pmatrix} 3 &amp; -2 &amp;  4 &amp; -2\\
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
 <p><span class="math inline">\(\displaystyle t^{4} - 11 t^{3} + 29 t^{2} + 35 t - 150\)</span></p>
 </div>
+</div>
+<p>Os autovalores de <span class="math inline">\(A\)</span> são as raízes do polinômio caraterístico <code>p</code>. As raízes de <code>p</code> podem ser econtradas usando <code>p.factor()</code>.</p>
+<div id="55dedb73" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p.factor()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
+<p><span class="math inline">\(\displaystyle \left(t - 5\right)^{2} \left(t - 3\right) \left(t + 2\right)\)</span></p>
+</div>
+</div>
+<p>Vemos que as raízes são <span class="math inline">\(5\)</span>, 4$, <span class="math inline">\(-2\)</span>.</p>
+<p>A mesma informação, pode ser obtida por rodar <code>A.charpoly()</code>e <code>A.eigenvals()</code>.</p>
+<div id="cb7305c7" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>A.charpoly()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
+<p><span class="math inline">\(\displaystyle \operatorname{PurePoly}{\left( \lambda^{4} - 11 \lambda^{3} + 29 \lambda^{2} + 35 \lambda - 150, \lambda, domain=\mathbb{Z} \right)}\)</span></p>
+</div>
+</div>
+<div id="d34c6e4e" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>A.eigenvals()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>{3: 1, -2: 1, 5: 2}</code></pre>
+</div>
+</div>
+<div id="exr-eigen" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercício 5.1</strong></span> Seguindo o <a href="#exm-eigen" class="quarto-xref">Exemplo&nbsp;<span>5.1</span></a>, calcule o polinômio caraterístico e os autovalores da matriz <span class="math display">\[
+A = \begin{pmatrix}
+-47 &amp; -240 &amp;  144 &amp;  374 &amp;  -92 \\
+-56 &amp; -325 &amp;  214 &amp;  520 &amp; -124 \\
+40  &amp; 200  &amp; -119 &amp; -312 &amp;   76\\
+-48 &amp; -264 &amp;  168 &amp; 419  &amp; -100\\
+36  &amp;  200 &amp; -128 &amp; -316 &amp;  79
+\end{pmatrix}
+\]</span></p>
 </div>
 
 

@@ -122,21 +122,21 @@
   {
     "objectID": "diagonal.html",
     "href": "diagonal.html",
-    "title": "5  Geometria 3D com GeoGebra",
+    "title": "5  Autovalores, autovetores, diagonalização",
     "section": "",
-    "text": "5.1 Autovalores, autovetores, diagonalização\nPrimeiro, vamos definir a matrix \\(A\\):\nfrom sympy import *\nA = Matrix([[3, -2,  4, -2], [5,  3, -3, -2], [5, -2,  2, -2], [5, -2, -3,  3]])\nA\nMatrix([\n[3, -2,  4, -2],\n[5,  3, -3, -2],\n[5, -2,  2, -2],\n[5, -2, -3,  3]])\n\n\\(\\displaystyle \\left[\\begin{matrix}3 & -2 & 4 & -2\\\\5 & 3 & -3 & -2\\\\5 & -2 & 2 & -2\\\\5 & -2 & -3 & 3\\end{matrix}\\right]\\)\nO polinômio caraterístico de \\(A\\) é definido como \\(\\det(A-tI)\\) onde \\(t\\) é um indeterminante e \\(I\\) é a matriz identidade \\(4\\times 4\\). O polinômio caraterístico pode ser determinado usando diretamente esta definição. Note que como o indeterminante t e a matriz identidade são definidos em SymPy.\nt = var('t')\nI4 = eye(4)\np = det(A-t*I4)\np\n\n\\(\\displaystyle t^{4} - 11 t^{3} + 29 t^{2} + 35 t - 150\\)",
+    "text": "5.1 Autovalores e autovetores\nPrimeiro, vamos definir a matrix \\(A\\):\nfrom sympy import *\nA = Matrix([[3, -2,  4, -2], [5,  3, -3, -2], [5, -2,  2, -2], [5, -2, -3,  3]])\nA\nMatrix([\n[3, -2,  4, -2],\n[5,  3, -3, -2],\n[5, -2,  2, -2],\n[5, -2, -3,  3]])\n\n\\(\\displaystyle \\left[\\begin{matrix}3 & -2 & 4 & -2\\\\5 & 3 & -3 & -2\\\\5 & -2 & 2 & -2\\\\5 & -2 & -3 & 3\\end{matrix}\\right]\\)\nO polinômio caraterístico de \\(A\\) é definido como \\(\\det(A-tI)\\) onde \\(t\\) é um indeterminante e \\(I\\) é a matriz identidade \\(4\\times 4\\). O polinômio caraterístico pode ser determinado usando diretamente esta definição. Note que como o indeterminante t e a matriz identidade são definidos em SymPy.\nt = var('t')\nI4 = eye(4)\np = det(A-t*I4)\np\n\n\\(\\displaystyle t^{4} - 11 t^{3} + 29 t^{2} + 35 t - 150\\)\nOs autovalores de \\(A\\) são as raízes do polinômio caraterístico p. As raízes de p podem ser econtradas usando p.factor().\np.factor()\n\n\\(\\displaystyle \\left(t - 5\\right)^{2} \\left(t - 3\\right) \\left(t + 2\\right)\\)\nVemos que as raízes são \\(5\\), 4$, \\(-2\\).\nA mesma informação, pode ser obtida por rodar A.charpoly()e A.eigenvals().\nA.charpoly()\n\n\\(\\displaystyle \\operatorname{PurePoly}{\\left( \\lambda^{4} - 11 \\lambda^{3} + 29 \\lambda^{2} + 35 \\lambda - 150, \\lambda, domain=\\mathbb{Z} \\right)}\\)\nA.eigenvals()\n\n{3: 1, -2: 1, 5: 2}",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Geometria 3D com GeoGebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Autovalores, autovetores, diagonalização</span>"
     ]
   },
   {
-    "objectID": "diagonal.html#autovalores-autovetores-diagonalização",
-    "href": "diagonal.html#autovalores-autovetores-diagonalização",
-    "title": "5  Geometria 3D com GeoGebra",
+    "objectID": "diagonal.html#autovalores-e-autovetores",
+    "href": "diagonal.html#autovalores-e-autovetores",
+    "title": "5  Autovalores, autovetores, diagonalização",
     "section": "",
-    "text": "Exemplo 5.1 Considere a matriz \\[\nA = \\begin{pmatrix} 3 & -2 &  4 & -2\\\\\n                    5 &  3 & -3 & -2\\\\\n                    5 & -2 &  2 & -2\\\\\n                    5 & -2 & -3 &  3\n    \\end{pmatrix}\n\\] Vamos calcular os seguintes atributos de \\(A\\):\n\no polinômio caraterístico de \\(A\\);\nos autovalores de \\(A\\);\nvamos decidir se \\(A\\) é diagonalizável;\nvamos calcular matriz \\(P\\) tal que \\(P^{-1}AP\\) é diagonal.",
+    "text": "Exemplo 5.1 Considere a matriz \\[\nA = \\begin{pmatrix} 3 & -2 &  4 & -2\\\\\n                    5 &  3 & -3 & -2\\\\\n                    5 & -2 &  2 & -2\\\\\n                    5 & -2 & -3 &  3\n    \\end{pmatrix}\n\\] Vamos calcular os seguintes atributos de \\(A\\):\n\no polinômio caraterístico de \\(A\\);\nos autovalores de \\(A\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercício 5.1 Seguindo o Exemplo 5.1, calcule o polinômio caraterístico e os autovalores da matriz \\[\nA = \\begin{pmatrix}\n-47 & -240 &  144 &  374 &  -92 \\\\\n-56 & -325 &  214 &  520 & -124 \\\\\n40  & 200  & -119 & -312 &   76\\\\\n-48 & -264 &  168 & 419  & -100\\\\\n36  &  200 & -128 & -316 &  79\n\\end{pmatrix}\n\\]",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Geometria 3D com GeoGebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Autovalores, autovetores, diagonalização</span>"
     ]
   }
 ]
