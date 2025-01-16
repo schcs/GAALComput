@@ -118,5 +118,25 @@
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Geometria 3D com GeoGebra</span>"
     ]
+  },
+  {
+    "objectID": "diagonal.html",
+    "href": "diagonal.html",
+    "title": "5  Geometria 3D com GeoGebra",
+    "section": "",
+    "text": "5.1 Autovalores, autovetores, diagonalização\nPrimeiro, vamos definir a matrix \\(A\\):\nfrom sympy import *\nA = Matrix([[3, -2,  4, -2], [5,  3, -3, -2], [5, -2,  2, -2], [5, -2, -3,  3]])\nA\nMatrix([\n[3, -2,  4, -2],\n[5,  3, -3, -2],\n[5, -2,  2, -2],\n[5, -2, -3,  3]])\n\n\\(\\displaystyle \\left[\\begin{matrix}3 & -2 & 4 & -2\\\\5 & 3 & -3 & -2\\\\5 & -2 & 2 & -2\\\\5 & -2 & -3 & 3\\end{matrix}\\right]\\)\nO polinômio caraterístico de \\(A\\) é definido como \\(\\det(A-tI)\\) onde \\(t\\) é um indeterminante e \\(I\\) é a matriz identidade \\(4\\times 4\\). O polinômio caraterístico pode ser determinado usando diretamente esta definição. Note que como o indeterminante t e a matriz identidade são definidos em SymPy.\nt = var('t')\nI4 = eye(4)\np = det(A-t*I4)\np\n\n\\(\\displaystyle t^{4} - 11 t^{3} + 29 t^{2} + 35 t - 150\\)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Geometria 3D com GeoGebra</span>"
+    ]
+  },
+  {
+    "objectID": "diagonal.html#autovalores-autovetores-diagonalização",
+    "href": "diagonal.html#autovalores-autovetores-diagonalização",
+    "title": "5  Geometria 3D com GeoGebra",
+    "section": "",
+    "text": "Exemplo 5.1 Considere a matriz \\[\nA = \\begin{pmatrix} 3 & -2 &  4 & -2\\\\\n                    5 &  3 & -3 & -2\\\\\n                    5 & -2 &  2 & -2\\\\\n                    5 & -2 & -3 &  3\n    \\end{pmatrix}\n\\] Vamos calcular os seguintes atributos de \\(A\\):\n\no polinômio caraterístico de \\(A\\);\nos autovalores de \\(A\\);\nvamos decidir se \\(A\\) é diagonalizável;\nvamos calcular matriz \\(P\\) tal que \\(P^{-1}AP\\) é diagonal.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Geometria 3D com GeoGebra</span>"
+    ]
   }
 ]
