@@ -787,42 +787,42 @@ A = \begin{pmatrix} 3 &amp; -2 &amp;  4 &amp; -2\\
 </ol>
 </div>
 <p>Primeiro, vamos definir a matrix <span class="math inline">\(A\)</span>:</p>
-<div id="d89581f0" class="cell" data-execution_count="1">
+<div id="f3f4deb7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Matrix([[<span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>,  <span class="dv">4</span>, <span class="op">-</span><span class="dv">2</span>], [<span class="dv">5</span>,  <span class="dv">3</span>, <span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>], [<span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>,  <span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>], [<span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>,  <span class="dv">3</span>]])</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>A</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="50">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}3 &amp; -2 &amp; 4 &amp; -2\\5 &amp; 3 &amp; -3 &amp; -2\\5 &amp; -2 &amp; 2 &amp; -2\\5 &amp; -2 &amp; -3 &amp; 3\end{matrix}\right]\)</span></p>
 </div>
 </div>
 <p>O polinômio caraterístico de <span class="math inline">\(A\)</span> é definido como <span class="math inline">\(\det(A-tI)\)</span> onde <span class="math inline">\(t\)</span> é um indeterminante e <span class="math inline">\(I\)</span> é a matriz identidade <span class="math inline">\(4\times 4\)</span>. O polinômio caraterístico pode ser determinado usando diretamente esta definição. Note como o indeterminante <code>t</code> e a matriz identidade são definidos em <code>SymPy</code>.</p>
-<div id="0e382556" class="cell" data-execution_count="2">
+<div id="dcbce3b9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> var(<span class="st">'t'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>I4 <span class="op">=</span> eye(<span class="dv">4</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> det(A<span class="op">-</span>t<span class="op">*</span>I4)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="51">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
 <p><span class="math inline">\(\displaystyle t^{4} - 11 t^{3} + 29 t^{2} + 35 t - 150\)</span></p>
 </div>
 </div>
 <p>Os autovalores de <span class="math inline">\(A\)</span> são as raízes do polinômio caraterístico <code>p</code>. As raízes de <code>p</code> podem ser econtradas usando <code>p.factor()</code>.</p>
-<div id="d0deac22" class="cell" data-execution_count="3">
+<div id="3a4fa7ef" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p.factor()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="52">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
 <p><span class="math inline">\(\displaystyle \left(t - 5\right)^{2} \left(t - 3\right) \left(t + 2\right)\)</span></p>
 </div>
 </div>
 <p>Vemos que as raízes são <span class="math inline">\(5\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(-2\)</span>.</p>
 <p>A mesma informação, pode ser obtida por rodar <code>A.charpoly()</code>e <code>A.eigenvals()</code>.</p>
-<div id="5277bfec" class="cell" data-execution_count="4">
+<div id="c97363f6" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>A.charpoly()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="53">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
 <p><span class="math inline">\(\displaystyle \operatorname{PurePoly}{\left( \lambda^{4} - 11 \lambda^{3} + 29 \lambda^{2} + 35 \lambda - 150, \lambda, domain=\mathbb{Z} \right)}\)</span></p>
 </div>
 </div>
-<div id="6936ef03" class="cell" data-execution_count="5">
+<div id="0b171796" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>A.eigenvals()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="54">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>{3: 1, -2: 1, 5: 2}</code></pre>
 </div>
 </div>
@@ -843,10 +843,10 @@ B = \begin{pmatrix}
 <h2 data-number="5.2" data-anchor-id="os-autovetores-e-diagonalização"><span class="header-section-number">5.2</span> Os autovetores e diagonalização</h2>
 <div id="exm-eigenvects" class="theorem example">
 <p><span class="theorem-title"><strong>Exemplo 5.2</strong></span> Os autovetores da matriz <span class="math inline">\(A\)</span> no <a href="#exm-eigen" class="quarto-xref">Exemplo&nbsp;<span>5.1</span></a> podem ser determinados usando <code>A.eigenvects()</code>.</p>
-<div id="36c45268" class="cell" data-execution_count="6">
+<div id="f40106d4" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>autovet <span class="op">=</span> A.eigenvects()</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>autovet</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="55">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>[(-2,
   1,
   [Matrix([
@@ -877,21 +877,21 @@ B = \begin{pmatrix}
 </div>
 <p>Observe que obtivemos um autovetor para o autovalor <span class="math inline">\(-2\)</span>, um para <span class="math inline">\(3\)</span>, mas dois para <span class="math inline">\(5\)</span>. Isso acontece por causa das multiplicidades dos autovalores.</p>
 <p>Para verificar que os vetores obtidos são de fato autovetores, podemos fazer a seguinte conta.</p>
-<div id="d8c106f8" class="cell" data-execution_count="7">
+<div id="07c4b693" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>autovet[<span class="dv">0</span>][<span class="dv">2</span>][<span class="dv">0</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="56">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="7">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}0\\1\\1\\1\end{matrix}\right]\)</span></p>
 </div>
 </div>
-<div id="15ea4d4d" class="cell" data-execution_count="8">
+<div id="2ea06edf" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>A<span class="op">*</span>autovet[<span class="dv">0</span>][<span class="dv">2</span>][<span class="dv">0</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="57">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="8">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}0\\-2\\-2\\-2\end{matrix}\right]\)</span></p>
 </div>
 </div>
 <p>Observe que, o vetor <code>autovet[0][2][0]</code> multiplicado por <code>A</code> será multiplicado por <span class="math inline">\(-2\)</span>. Ou seja, este vetor é de fato autovetor para o autovalor <span class="math inline">\(-2\)</span>.</p>
 <p>Agora, vamos diagonalizar a matriz <span class="math inline">\(A\)</span> criando uma matriz <span class="math inline">\(P\)</span> que contém autovetores de <span class="math inline">\(A\)</span> LI.</p>
-<div id="15e696d1" class="cell" data-execution_count="9">
+<div id="dc14b26b" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Começamos pela matriz nula 4x4</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> zeros(<span class="dv">4</span>, <span class="dv">4</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># colocamos nas colunas de P os autovetores de A</span></span>
@@ -900,14 +900,14 @@ B = \begin{pmatrix}
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>P[:,<span class="dv">2</span>] <span class="op">=</span> autovet[<span class="dv">2</span>][<span class="dv">2</span>][<span class="dv">0</span>]</span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>P[:,<span class="dv">3</span>] <span class="op">=</span> autovet[<span class="dv">2</span>][<span class="dv">2</span>][<span class="dv">1</span>]</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>P</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="58">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="9">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}0 &amp; 1 &amp; 1 &amp; 0\\1 &amp; 1 &amp; 1 &amp; -1\\1 &amp; 1 &amp; 1 &amp; 0\\1 &amp; 1 &amp; 0 &amp; 1\end{matrix}\right]\)</span></p>
 </div>
 </div>
 <p>Ora verifique, que <span class="math inline">\(P^{-1}AP\)</span> é diagonal.</p>
-<div id="52fa19ff" class="cell" data-execution_count="10">
+<div id="bf62a3c4" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>P<span class="op">**-</span><span class="dv">1</span><span class="op">*</span>A<span class="op">*</span>P</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="59">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="10">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}-2 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 3 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 5 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 5\end{matrix}\right]\)</span></p>
 </div>
 </div>
@@ -928,15 +928,15 @@ B = \begin{pmatrix}
 <p><span class="theorem-title"><strong>Exemplo 5.3</strong></span> Considere a cônica que também foi considerada na aula: <span class="math display">\[
 f(x,y) = x^2+2\sqrt 3xy+3y^2+2\sqrt 3x-2y=0.
 \]</span> Desta equação é difícil identificar se ela representa uma elipse, hipérbole, ou parábola. No entanto, nós podemos definir esta curva e visializá-la em Python.</p>
-<div id="6fa0c89a" class="cell" data-execution_count="11">
+<div id="70a5f727" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> var(<span class="st">'x y'</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span><span class="op">+</span><span class="dv">2</span><span class="op">*</span>sqrt(<span class="dv">3</span>)<span class="op">*</span>x<span class="op">*</span>y<span class="op">+</span><span class="dv">3</span><span class="op">*</span>y<span class="op">**</span><span class="dv">2</span><span class="op">+</span><span class="dv">2</span><span class="op">*</span>sqrt(<span class="dv">3</span>)<span class="op">*</span>x<span class="op">-</span><span class="dv">2</span><span class="op">*</span>y</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>f</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="60">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="11">
 <p><span class="math inline">\(\displaystyle x^{2} + 2 \sqrt{3} x y + 2 \sqrt{3} x + 3 y^{2} - 2 y\)</span></p>
 </div>
 </div>
-<div id="2d74a627" class="cell" data-execution_count="12">
+<div id="770ac0fe" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plot_implicit(f)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -948,22 +948,22 @@ f(x,y) = x^2+2\sqrt 3xy+3y^2+2\sqrt 3x-2y=0.
 </div>
 <p>Do desenho fica claro que esta cônica é uma parábola.</p>
 <p>Ora, vamos definir a matriz que corresponde à cônica e calcular os seus autovalores e autovetores.</p>
-<div id="56640481" class="cell" data-execution_count="13">
+<div id="d7b1048d" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> Matrix( [[<span class="dv">1</span>,sqrt(<span class="dv">3</span>)],[sqrt(<span class="dv">3</span>),<span class="dv">3</span>]])</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>C</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="62">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="13">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}1 &amp; \sqrt{3}\\\sqrt{3} &amp; 3\end{matrix}\right]\)</span></p>
 </div>
 </div>
-<div id="ba357c95" class="cell" data-execution_count="14">
+<div id="7ce103a0" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>C.eigenvals()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="63">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>{4: 1, 0: 1}</code></pre>
 </div>
 </div>
-<div id="e19f2d7d" class="cell" data-execution_count="15">
+<div id="4b3b9eca" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>C.eigenvects()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="64">
+<div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>[(0,
   1,
   [Matrix([
@@ -977,81 +977,81 @@ f(x,y) = x^2+2\sqrt 3xy+3y^2+2\sqrt 3x-2y=0.
 </div>
 </div>
 <p>Daqui, definimos os autovetores <code>v1</code> e <code>v2</code>.</p>
-<div id="8619aa90" class="cell" data-execution_count="16">
+<div id="0b4a1a1f" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="op">=</span> C.eigenvects()[<span class="dv">0</span>][<span class="dv">2</span>][<span class="dv">0</span>]</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>v2 <span class="op">=</span> C.eigenvects()[<span class="dv">1</span>][<span class="dv">2</span>][<span class="dv">0</span>]</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>v1</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="65">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="16">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}- \sqrt{3}\\1\end{matrix}\right]\)</span></p>
 </div>
 </div>
-<div id="367f278e" class="cell" data-execution_count="17">
+<div id="fd6a6b59" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>v2</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="66">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="17">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}\frac{\sqrt{3}}{3}\\1\end{matrix}\right]\)</span></p>
 </div>
 </div>
 <p>Note que, os autovetores <code>v1</code> e <code>v2</code> são ortogonais. Isso ocorre, porque a matriz <span class="math inline">\(C\)</span> é simétrica. Para fazer a diagonalização ortogonal, precisamos de autovetores ortonormais. Para isso, dividumos os autovetores com as suas normas.</p>
-<div id="da89047d" class="cell" data-execution_count="18">
+<div id="bced72c2" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="op">=</span> v1<span class="op">/</span>v1.norm()</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>v2 <span class="op">=</span> v2<span class="op">/</span>v2.norm()</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>v1</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="67">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="18">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}- \frac{\sqrt{3}}{2}\\\frac{1}{2}\end{matrix}\right]\)</span></p>
 </div>
 </div>
-<div id="2f3cc7dd" class="cell" data-execution_count="19">
+<div id="b80455c7" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>v2</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="68">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="19">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}\frac{1}{2}\\\frac{\sqrt{3}}{2}\end{matrix}\right]\)</span></p>
 </div>
 </div>
 <p>Ora, definimos a matriz <span class="math inline">\(P\)</span> que contém os autovetores ortonormais nas suas colunas.</p>
-<div id="d9ed12e3" class="cell" data-execution_count="20">
+<div id="a8f6bbc4" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> zeros(<span class="dv">2</span>,<span class="dv">2</span>)</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>P[:,<span class="dv">0</span>] <span class="op">=</span> v1</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>P[:,<span class="dv">1</span>] <span class="op">=</span> v2</span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>P</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="69">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="20">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}- \frac{\sqrt{3}}{2} &amp; \frac{1}{2}\\\frac{1}{2} &amp; \frac{\sqrt{3}}{2}\end{matrix}\right]\)</span></p>
 </div>
 </div>
 <p>Veja que <span class="math inline">\(P\)</span> é matriz ortogonal; ou seja <span class="math inline">\(P^tP=I\)</span>.</p>
-<div id="ed649c3b" class="cell" data-execution_count="21">
+<div id="b484a9a6" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>P<span class="op">*</span>P.transpose()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="70">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="21">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}1 &amp; 0\\0 &amp; 1\end{matrix}\right]\)</span></p>
 </div>
 </div>
 <p>Definimos as novas variáveis <span class="math inline">\(x_1\)</span> e <span class="math inline">\(y_1\)</span>.</p>
-<div id="b082f4e7" class="cell" data-execution_count="22">
+<div id="c1d074d6" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>x1, y1 <span class="op">=</span> var( <span class="st">'x1 y1'</span> )</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># definimos o vetor com as novas variávies</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> P.transpose()<span class="op">*</span>Matrix([[x1],[y1]])</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> P<span class="op">*</span>Matrix([[x1],[y1]])</span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># as novas variáveis serão as entradas de X1</span></span>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> X1[<span class="dv">0</span>]</span>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> X1[<span class="dv">1</span>]</span>
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>x1</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="71">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="22">
 <p><span class="math inline">\(\displaystyle - \frac{\sqrt{3} x_{1}}{2} + \frac{y_{1}}{2}\)</span></p>
 </div>
 </div>
-<div id="1377d3e5" class="cell" data-execution_count="23">
+<div id="1f993e29" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>v2</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="72">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="23">
 <p><span class="math inline">\(\displaystyle \left[\begin{matrix}\frac{1}{2}\\\frac{\sqrt{3}}{2}\end{matrix}\right]\)</span></p>
 </div>
 </div>
 <p>Agora, substituímos as novas variáveis na equação da curva e depois da simplificação, obtemos uma equação mais simples.</p>
-<div id="9a631b2b" class="cell" data-execution_count="24">
+<div id="45772ee4" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>f1 <span class="op">=</span> f.subs( [(x,x1), (y,y1)]).simplify()</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>f1</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="73">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="24">
 <p><span class="math inline">\(\displaystyle - 4 x_{1} + 4 y_{1}^{2}\)</span></p>
 </div>
 </div>
 <p>Desta equação, fica claro sem visualizar que a curva é uma parábola. No entanto, nós vamos visualizar para termos certeza.</p>
-<div id="26cbb145" class="cell" data-execution_count="25">
+<div id="04e5d2c2" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>plot_implicit(f1)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
