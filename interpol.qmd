@@ -1,6 +1,6 @@
 ## O problema da interpolação
 
-Sejam $P_1=(1,1)$, $P_2=(-1,1)$, $P_3=(2,1)$ e $P_3=(-2,-11)$ quatro pontos no plano. Queremos achar uma função
+Sejam $P_1=(1,1)$, $P_2=(-1,1)$, $P_3=(2,1)$ e $P_4=(-2,-11)$ quatro pontos no plano. Queremos achar uma função
 polinomial
 $$
 f(x)=\alpha_3 x^3+\alpha_2 x^2+\alpha_1 x+\alpha_0
