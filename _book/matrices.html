@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
+<<<<<<< HEAD
 <meta name="generator" content="quarto-1.9.2">
+=======
+<meta name="generator" content="quarto-1.6.36">
+>>>>>>> 20444d385062d0bba8d4b0468a2fd4047de6c6d7
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,10 +78,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<<<<<<< HEAD
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-c6982bbdd90c704a9b15aa23d87ad911.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-6f336d90f0dd392c7b45f2cd4107f543.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+=======
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a4eaaad0633bf333006c066f6bed3d1f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+>>>>>>> 20444d385062d0bba8d4b0468a2fd4047de6c6d7
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1057,9 +1068,21 @@ B=\begin{pmatrix}2&amp;5&amp;4&amp;4&amp;1&amp;2\\ 2&amp;4&amp;4&amp;2&amp;4&amp
         }
       }
       return codeEl.innerText;
+<<<<<<< HEAD
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
+=======
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+>>>>>>> 20444d385062d0bba8d4b0468a2fd4047de6c6d7
     });
     clipboard.on('success', onCopySuccess);
     if (window.document.getElementById('quarto-embedded-source-code-modal')) {
@@ -1173,11 +1196,29 @@ B=\begin{pmatrix}2&amp;5&amp;4&amp;4&amp;1&amp;2\\ 2&amp;4&amp;4&amp;2&amp;4&amp
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
+<<<<<<< HEAD
         if (note.classList.contains("callout")) {
           return note.outerHTML;
         } else {
           return note.innerHTML;
         }
+=======
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+>>>>>>> 20444d385062d0bba8d4b0468a2fd4047de6c6d7
       }
     }
     for (var i=0; i<xrefs.length; i++) {
