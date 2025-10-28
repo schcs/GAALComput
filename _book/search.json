@@ -104,7 +104,7 @@
     "href": "interpol.html",
     "title": "3  O problema da interpolação",
     "section": "",
-    "text": "3.1 Exercício\nAgora faça você mesmo.\nAche um polinômio \\(f(x)\\) de grau \\(5\\) tal que \\[\nf(0)=-1,\\ f(1)=-2,\\ f(-1)=0,\\ f(2)=-57,\\ f(-2)=79,\\ f(3)=-436.\n\\] Vizualize o polinômio encontrado.",
+    "text": "3.1 Exercício\nSejam \\(P_1=(1,1)\\), \\(P_2=(-1,1)\\), \\(P_3=(2,1)\\) e \\(P_4=(-2,-11)\\) quatro pontos no plano. Queremos achar uma função polinomial \\[\nf(x)=\\alpha_3 x^3+\\alpha_2 x^2+\\alpha_1 x+\\alpha_0\n\\] tal que o grafo de \\(f(x)\\) passe pelos pontos \\(P_1\\), \\(P_2\\), \\(P_3\\), \\(P_4\\). Em outras palavras, \\[\nf(1)=1,\\quad f(-1)=1,\\quad f(2)=1,\\quad f(-2)=-11.\n\\] Substituindo em \\(f(x)\\) obtemos o seguinte sistema de equações lineares. \\[\\begin{align*}\n\\alpha_0+\\alpha_1+\\alpha_2+\\alpha_3&=1\\\\\n\\alpha_0-\\alpha_1+\\alpha_2-\\alpha_3&=1\\\\\n\\alpha_0+2\\alpha_1+4\\alpha_2+8\\alpha_3&=1\\\\\n\\alpha_0-2\\alpha_1+4\\alpha_2-8\\alpha_3&=-11\n\\end{align*}\\] Para resolver o problema da interpolação, precisamos resolver o sistema acima.\n\\(\\displaystyle \\left[\\begin{matrix}3\\\\-1\\\\-2\\\\1\\end{matrix}\\right]\\)\nObtemos da computação que \\(\\alpha_0=3\\), \\(\\alpha_1=-1\\), \\(\\alpha_2=-2\\), \\(\\alpha_3=1\\). Ou seja, o polinômio procurado é\n\\[\nf(x)=x^3-2x^2-x+3\n\\] Para visualizar o polinômio obtido, podemos executar as seguintes linhas.\nAgora faça você mesmo.\nAche um polinômio \\(f(x)\\) de grau \\(5\\) tal que \\[\nf(0)=-1,\\ f(1)=-2,\\ f(-1)=0,\\ f(2)=-57,\\ f(-2)=79,\\ f(3)=-436.\n\\] Vizualize o polinômio encontrado.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>O problema da interpolação</span>"
     ]
