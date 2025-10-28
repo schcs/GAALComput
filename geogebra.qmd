@@ -45,7 +45,7 @@ $$s:\ (x,y,z)\ =\ (3,5,1) + s(-1,1,3)$$
 2. Determine a equação do plano $\alpha$ que contém a reta $r$ e que é paralelo a reta $s$.
 3. Determine a equação do plano $\beta$ que contém a reta $s$ e que é paralelo a reta $r$.
 4. Verifique que a distância entre os planos $\alpha$ e $\beta$ é igual à distância entre as retas $r$ e $s$.
-5. Determine a equação paramétrica da reta $t$ que é perpendicular aos planos $\alpha$ e $\beta$ e é concorrente com as retas $r$ e $s$.
+5. Determine a equação paramétrica da reta $t$ que é perpendicular aos planos $\alpha$ e $\beta$ e é concorrente com as retas $r$ e $s$. (Dica: Esta reta vai estar na interseção do plano que contêm $r$ e é perpendicular a $\alpha$ com o plano que contém $s$ e é perpendicular a $\alpha$.)
 6. Determine os pontos $A$ e $B$ de interseção entre a reta $t$ e o planos $\alpha$ e $\beta$.
 7. Verifique que a distância entre as retas $r$ e $s$ é igual ao comprimento do segmento de reta $AB$.
 :::
